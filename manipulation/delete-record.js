@@ -9,6 +9,7 @@ module.exports = function () {
 
    for (const table in SCHEMA) {
       if (SCHEMA.hasOwnProperty(table)) {
+         // Create fake query to delete random record
          workers(table, (err, query) => {
             sequelize.query(query).spread((results, metadata) => {
                let t1 = performance.now();

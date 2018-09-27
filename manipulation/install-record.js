@@ -11,6 +11,7 @@ module.exports = () => {
    for (const table in SCHEMA) {
       if (SCHEMA.hasOwnProperty(table)) {
          const { records, model } = SCHEMA[table];
+         // Create data required to install. Format [{email: '', name: ''}, {email: '', name: ''}]
          workers(records, (err, res) => {
             // Install multiple records
             model.bulkCreate(res).then(() => {

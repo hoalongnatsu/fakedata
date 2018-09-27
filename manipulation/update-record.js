@@ -10,7 +10,7 @@ module.exports = function () {
    for (const table in SCHEMA) {
       if (SCHEMA.hasOwnProperty(table)) {
          const { records } = SCHEMA[table];
-         
+         // Create fake query to update random record
          workers({records, table}, (err, query) => {
             sequelize.query(query).spread((results, metadata) => {
                let t1 = performance.now();
