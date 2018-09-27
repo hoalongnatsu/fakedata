@@ -5,7 +5,7 @@ const DATABASE = {
    password: 'Mr1p_ySz_aEs' 
 };
 
-const NUMBER_RECORD_INSERT = 1000000;
+const NUMBER_RECORD_INSERT = 10;
 
 module.exports = {
    DATABASE,

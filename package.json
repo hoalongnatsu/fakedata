@@ -12,6 +12,7 @@
     "faker": "^4.1.0",
     "sequelize": "^4.39.0",
     "tedious": "^2.6.4",
-    "threads": "^0.12.0"
+    "threads": "^0.12.0",
+    "worker-farm": "^1.6.0"
   }
 }

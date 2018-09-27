@@ -3,6 +3,7 @@ const Sequelize = require('sequelize');
 const { DATABASE } = require('../config');
 
 const db = module.exports = new Sequelize(DATABASE.name, DATABASE.user, DATABASE.password, {
+      logging: false,
       host: DATABASE.host,
       dialect: 'mssql',
       operatorsAliases: false,
