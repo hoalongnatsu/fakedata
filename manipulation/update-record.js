@@ -7,7 +7,7 @@ const divideWorkers = workerFarm(require.resolve('../worker/divide-worker'));
 const workers = workerFarm(require.resolve('../worker/create-fake-query-update'));
 
 module.exports = function () {
-   let t0 = performance.now();
+   // let t0 = performance.now();
 
    for (const table in SCHEMA) {
       if (SCHEMA.hasOwnProperty(table)) {
@@ -16,8 +16,8 @@ module.exports = function () {
             for (let i = number; i >= 0; i--) {
                workers({records, table, NUMBER_RECORD_UPDATE: NUMBER_RECORD_UPDATE/number }, (err, query) => {
                   sequelize.query(query).spread((results, metadata) => {
-                     let t1 = performance.now();
-                     console.log("Took update: " + (t1 - t0) + " ms");
+                     // let t1 = performance.now();
+                     // console.log("Took update: " + (t1 - t0) + " ms");
                   });
                });
             }

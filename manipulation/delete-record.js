@@ -7,7 +7,7 @@ const divideWorkers = workerFarm(require.resolve('../worker/divide-worker'));
 const workers = workerFarm(require.resolve('../worker/create-fake-query-delete'));
 
 module.exports = function () {
-   let t0 = performance.now();
+   // let t0 = performance.now();
 
    for (const table in SCHEMA) {
       if (SCHEMA.hasOwnProperty(table)) {
@@ -15,8 +15,8 @@ module.exports = function () {
             for (let i = number; i >= 0; i--) {
                workers({table, NUMBER_RECORD_DELETE: NUMBER_RECORD_DELETE/number }, (err, query) => {
                   sequelize.query(query).spread((results, metadata) => {
-                     let t1 = performance.now();
-                     console.log("Took delete: " + (t1 - t0) + " ms");
+                     // let t1 = performance.now();
+                     // console.log("Took delete: " + (t1 - t0) + " ms");
                   });
                });
             }

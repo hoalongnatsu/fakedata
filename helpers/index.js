@@ -28,7 +28,7 @@ function createFakeRecordInstall(record, column) {
 };
 
 function createFakeRecordUpdate(record, column) {
-   return `${record}, ${column} = '${createFakeColumn(column).replace("'", "\'")}'`;
+   return `${record}, ${column} = '${createFakeColumn(column).replace(/'/g, "\'")}'`;
 }
 
 module.exports = {
