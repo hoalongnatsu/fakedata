@@ -1,10 +1,12 @@
 const installRecord = require('./manipulation/install-record');
 const updateRecord = require('./manipulation/update-record');
 const deleteRecord = require('./manipulation/delete-record');
+const { TIME_INSERT, TIME_UPDATE, TIME_DELETE } = require('./config');
 
-setInterval(installRecord, 5000);
-// setInterval(updateRecord, 7000);
-// setInterval(deleteRecord, 10000);
+// setInterval(installRecord, TIME_INSERT);
+// setInterval(updateRecord, TIME_UPDATE);
+// setInterval(deleteRecord, TIME_DELETE);
 
-// installRecord();
+installRecord();
 // updateRecord();
+// deleteRecord();

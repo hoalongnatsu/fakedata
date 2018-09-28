@@ -14,7 +14,7 @@ const db = module.exports = new Sequelize(DATABASE.name, DATABASE.user, DATABASE
          max: 5,
          min: 0,
          acquire: 30000,
-         idle: 20000
+         idle: 10000
       },
 });
 
