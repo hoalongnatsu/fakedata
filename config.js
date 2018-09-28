@@ -1,8 +1,8 @@
 const DATABASE = {
-   host: 'den1.mssql2.gear.host',
+   host: '35.237.199.137',
    name: 'faker',
-   user: 'faker',
-   password: 'Mr1p_ySz_aEs' 
+   user: 'sa',
+   password: '12345678x@X' 
 };
 
 const NUMBER_RECORD_INSERT = 1000;
