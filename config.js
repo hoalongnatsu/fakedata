@@ -8,6 +8,7 @@ const DATABASE = {
 const NUMBER_RECORD_INSERT = 1000;
 const NUMBER_RECORD_UPDATE = 1000;
 const NUMBER_RECORD_DELETE = 1500;
+const NUMBER_WOKER = 100;
 
 module.exports = {
    DATABASE,

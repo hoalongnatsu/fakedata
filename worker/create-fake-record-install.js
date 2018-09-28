@@ -1,7 +1,6 @@
 const { createFakeRecordInstall } = require('../helpers');
-const { NUMBER_RECORD_INSERT } = require('../config');
 
-module.exports = function (records, callback) {
+module.exports = function ({records, NUMBER_RECORD_INSERT}, callback) {
    var data = [];
    for (let i = NUMBER_RECORD_INSERT; i >= 0; i--) {
       // Generate data [{email: '', name: ''},{email: '', name: ''}]
